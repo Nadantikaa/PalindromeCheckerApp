@@ -1,9 +1,10 @@
 /**
- * Use case:1 harcodded palindrome validation
+ * Use case:1 Reverse String based  palindrome validation
  *
  *
- *This class demonstartes basic palindrome
- * validation using  a hardcoded string value
+ *This class demonstartes  whether a string is a palindrome
+ * by reversing a string and comparing it with the original
+ * value.
  *
  * @author Developer
  * @version 1.0
@@ -12,23 +13,14 @@ public static void main(String[] args){
     Scanner scanner = new Scanner(System.in);
     System.out.println("Input Text:");
     String input = scanner.nextLine();
-    int j=input.length()-1;
-    boolean IsPalliondrome=true;
-    for(int i=0;i<input.length()/2;i++){
-        if (input.charAt(j) != input.charAt(i)){
-            IsPalliondrome=false;
-                break;
-        }
-        else{
-                j--;
-        }
+    String reverse="";
+    for(int i=input.length()-1;i>=0; i--){
+        reverse+=input.charAt(i);
     }
-    if(IsPalliondrome){
+    if(input.equals(reverse)){
         System.out.println("Is it a Palindrome:True");
     }else{
         System.out.println("Is it a Palindrome:False");
     }
-
-
 
 }
