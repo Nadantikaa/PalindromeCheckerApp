@@ -22,7 +22,7 @@ public static void main(String[] args){
             IfPalindrome=false;
         }
     }
-    System.out.println("Input string:"+input);
+    System.out.println(" Input string:"+input);
     if(IfPalindrome){
         System.out.println("Is it a Palindrome:True");
     }else{
