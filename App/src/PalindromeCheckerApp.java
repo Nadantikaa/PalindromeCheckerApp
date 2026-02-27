@@ -1,13 +1,34 @@
 /**
- * Use case:1 Application entry and welcome message
+ * Use case:1 harcodded palindrome validation
  *
- * Appllication entry poit
  *
- * This is Palindrome Checker App entry message
+ *This class demonstartes basic palindrome
+ * validation using  a hardcoded string value
  *
  * @author Developer
  * @version 1.0
  */
 public static void main(String[] args){
-    System.out.println("Welcome to the palindrome checker management System\nversion:1.0\nSystem initialized successfully.");
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Input Text:");
+    String input = scanner.nextLine();
+    int j=input.length()-1;
+    boolean IsPalliondrome=true;
+    for(int i=0;i<input.length()/2;i++){
+        if (input.charAt(j) != input.charAt(i)){
+            IsPalliondrome=false;
+                break;
+        }
+        else{
+                j--;
+        }
+    }
+    if(IsPalliondrome){
+        System.out.println("Is it a Palindrome:True");
+    }else{
+        System.out.println("Is it a Palindrome:False");
+    }
+
+
+
 }
