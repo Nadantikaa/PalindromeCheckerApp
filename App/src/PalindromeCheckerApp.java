@@ -18,13 +18,11 @@ public static void main(String[] args){
             break;
         }
     }
-    private static boolean check (String input,int start, int end){
-        if(start>=end){
-            return true;
-        }
-        if (input.charAt(start) != input.charAt(end)) {
-            return false;
-        }
-        return check(input,start++,end--);
+    System.out.println("Input string:"+input);
+    if(IfPalindrome){
+        System.out.println("Is it a Palindrome:True");
+    }else{
+        System.out.println("Is it a Palindrome:False");
     }
+
 }
